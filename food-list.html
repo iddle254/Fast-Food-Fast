@@ -3,13 +3,14 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="fast-food.css">
+	<div w3-include-html="orders.html"></div>
 </head>
 <body>
 	<div>
 		<nav>
 		<ul>
-			<li><a href="default.asp">Food history</a></li>
-  			<li><a href="news.asp">Order list</a></li>
+			<li><a href="./history.html">Food history</a></li>
+  			<li><a href="orders.html">Order list</a></li>
 		</ul>
 	</nav>
 	</div>	
@@ -18,7 +19,7 @@
 			<img class="img-responsive" src="images/chicken.jpg" alt="">
 			<h2 class ="paragraph">
 				Fried Chicken
-				<button type="button"class ="button">Order</button>
+				<button type="button"class ="button"onclick=addRow>Order</button>
 				<hr>
 			</h2>
 			
