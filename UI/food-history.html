@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <head>
-      <link rel="stylesheet" type="text/css" href="fast-food.css">
-
+<link rel="stylesheet" type="text/css" href="fast-food.css">
 <script type="text/javascript">
-function addRow(Name,Order,Time,Status)
+function addRow(Order,Date,Status)
 {
          if (!document.getElementsByTagName) return;
          tabBody=document.getElementsByTagName("tbody").item(0);
@@ -11,19 +10,15 @@ function addRow(Name,Order,Time,Status)
          cell1 = document.createElement("td");
          cell2 = document.createElement("td");
          cell3 = document.createElement("td");
-         cell4 = document.createElement("td");
-         textnode1=document.createTextNode(Name);
          textnode2=document.createTextNode(Order);
-         textnode3=document.createTextNode(Time);
+         textnode3=document.createTextNode(Date);
          textnode4=document.createTextNode(Status);
-         cell1.appendChild(textnode1);
-         cell2.appendChild(textnode2);
-         cell3.appendChild(textnode3);
-         cell4.appendChild(textnode4);
+         cell1.appendChild(textnode2);
+         cell2.appendChild(textnode3);
+         cell3.appendChild(textnode4);
          row.appendChild(cell1);
          row.appendChild(cell2);
          row.appendChild(cell3);
-         row.appendChild(cell4);
          tabBody.appendChild(row);
 }
 </script>
@@ -32,13 +27,13 @@ function addRow(Name,Order,Time,Status)
 <div style="overflow-x:auto;">
 <table border='1' id='mytable'>
 <tbody>
-<tr><th width="32%">Name</th><th width="32%">Order</th>th<th width="32%">Time</th><th width="32%">Status</th></tr>
-<tr><td>James</td><td>Fried Chicken</td><td>time()</td><td>Complete</td></tr>
-<tr><td>Ricky</td><td>Pizza</td><td>time()</td><td>Complete</td></tr>
+<tr><th width="32%">Order</th><th width="32%">Date</th><th width="32%">Status</th></tr>
+<tr><td>Fried Chicken</td><td>date()</td><td>Complete</td></tr>
+<tr><td>Pizza</td><td>date()</td><td>Complete</td></tr>
 </tbody>
 </table>
 </div>
-<button onClick='addRow("Morty","Steak","time()","Incomplete");return false;'>
+<button onClick='addRow("Steak","date()","Incomplete");return false;'>
 Order</button>
 </body>
 <div class="navbar" id="myNavbar">

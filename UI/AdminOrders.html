@@ -3,7 +3,7 @@
       <link rel="stylesheet" type="text/css" href="fast-food.css">
 
 <script type="text/javascript">
-function addRow(Name,Order,Time,Status)
+function addRow(Name,Order,Time,Response)
 {
          if (!document.getElementsByTagName) return;
          tabBody=document.getElementsByTagName("tbody").item(0);
@@ -15,7 +15,7 @@ function addRow(Name,Order,Time,Status)
          textnode1=document.createTextNode(Name);
          textnode2=document.createTextNode(Order);
          textnode3=document.createTextNode(Time);
-         textnode4=document.createTextNode(Status);
+         textnode4=document.createTextNode(Response);
          cell1.appendChild(textnode1);
          cell2.appendChild(textnode2);
          cell3.appendChild(textnode3);
@@ -26,15 +26,31 @@ function addRow(Name,Order,Time,Status)
          row.appendChild(cell4);
          tabBody.appendChild(row);
 }
+function Response(evt) {
+  var response = evt.target || evt.srcElement;
+  if (response.name == 'accept') {
+    response.value = "Decline";
+  }
+}
 </script>
 </head>
 <body>
 <div style="overflow-x:auto;">
 <table border='1' id='mytable'>
 <tbody>
-<tr><th width="32%">Name</th><th width="32%">Order</th>th<th width="32%">Time</th><th width="32%">Status</th></tr>
-<tr><td>James</td><td>Fried Chicken</td><td>time()</td><td>Complete</td></tr>
-<tr><td>Ricky</td><td>Pizza</td><td>time()</td><td>Complete</td></tr>
+<tr><th width="32%">Name</th><th width="32%">Order</th><th width="32%">Time</th><th width="32%">Response</th></tr>
+<tr><td>James</td><td>Fried Chicken</td><td>time()</td>
+		<td><form name="f1" action="#" >
+                <input id="edit1" type="submit" name="accept" value="Accept">
+            </form>
+        </td>
+</tr>
+<tr><td>Ricky</td><td>Pizza</td><td>time()</td>
+	<td><form name="f1" action="#" >
+                <input id="edit1" type="submit" name="accept" value="Accept">
+        </form>
+    </td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -47,4 +63,3 @@ Order</button>
   <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 </html>
-
