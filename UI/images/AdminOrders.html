@@ -35,11 +35,6 @@ function Response(evt) {
 </script>
 </head>
 <body>
-	<div class ="page-intros"id="outer">
-    <div id="inner">
-        <h1 >Admin tasks</h1>
-    </div>
-</div> 
 <div style="overflow-x:auto;">
 <table border='1' id='mytable'>
 <tbody>
@@ -59,8 +54,12 @@ function Response(evt) {
 </tbody>
 </table>
 </div>
+<button onClick='addRow("Morty","Steak","time()","Incomplete");return false;'>
+Order</button>
+</body>
 <div class="navbar" id="myNavbar">
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 </html>

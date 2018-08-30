@@ -1,44 +1,30 @@
 <!DOCTYPE html>
 <head>
 <link rel="stylesheet" type="text/css" href="fast-food.css">
-<script type="text/javascript">
-function addRow(Order,Date,Status)
-{
-         if (!document.getElementsByTagName) return;
-         tabBody=document.getElementsByTagName("tbody").item(0);
-         row=document.createElement("tr");
-         cell1 = document.createElement("td");
-         cell2 = document.createElement("td");
-         cell3 = document.createElement("td");
-         textnode2=document.createTextNode(Order);
-         textnode3=document.createTextNode(Date);
-         textnode4=document.createTextNode(Status);
-         cell1.appendChild(textnode2);
-         cell2.appendChild(textnode3);
-         cell3.appendChild(textnode4);
-         row.appendChild(cell1);
-         row.appendChild(cell2);
-         row.appendChild(cell3);
-         tabBody.appendChild(row);
-}
-</script>
 </head>
 <body>
+
+<div class ="page-intros"id="outer">
+    <div id="inner">
+        <h1 >Previous orders</h1>
+    </div>
+</div>         
+      
 <div style="overflow-x:auto;">
-<table border='1' id='mytable'>
+<table border='1' id='myhistorytable'align="center"cellpadding="10">
 <tbody>
-<tr><th bgcolor="#FF0000"width="32%">Order</th><th bgcolor="#FF0000"width="32%">Date</th><th bgcolor="#FF0000"width="32%">Status</th></tr>
+<tr><th width="32%">Order</th><th width="32%">Date</th><th width="32%">Status</th></tr>
 <tr><td>Fried Chicken</td><td>date()</td><td>Complete</td></tr>
+<tr><td>Pizza</td><td>date()</td><td>Incomplete</td></tr>
+<tr><td>Pizza</td><td>date()</td><td>Complete</td></tr>
+<tr><td>Steak</td><td>date()</td><td>Complete</td></tr>
 <tr><td>Pizza</td><td>date()</td><td>Complete</td></tr>
 </tbody>
 </table>
 </div>
-<button onClick='addRow("Steak","date()","Incomplete");return false;'>
-Order</button>
 </body>
 <div class="navbar" id="myNavbar">
   <a href="#contact">Contact</a>
   <a href="#about">About</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
 </html>
