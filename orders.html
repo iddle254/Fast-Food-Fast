@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+	<script type="text/javascript">
+		function makeorder(content,morecontent)
+			{
+				//window.location.href ="orders.html"
+         		if (!document.getElementsByTagName) return;
+         		tabBody=document.getElementsByTagName("tbody").item(0);
+         		row=document.createElement("tr");
+         		cell1 = document.createElement("td");
+         		cell2 = document.createElement("td");
+         		textnode1=document.createTextNode(content);
+         		textnode2=document.createTextNode(morecontent);
+        		cell1.appendChild(textnode1);
+         		cell2.appendChild(textnode2);
+         		row.appendChild(cell1);
+         		row.appendChild(cell2);
+         		tabBody.appendChild(row);
+			}
+		function time(){
+				var my-date = new Date();
+				var my-time = d.toLocaleTimeString();
+				return my-time;
+			}
+			
+	</script>
+</head>
+<body>
+<table border='1' id='mytable'>
+<tbody>
+<tr><td width="32%">Name</td><td width="32%">Order</td><td width="32%">Time</td><td width="32%">Status</td></tr>
+<tr><td>22</td><td>333</td></tr>
+</tbody>
+</table>
+
+	<button type="button"class ="button"onclick='makeorder("James",Fried Chicken","time()","Completed");return false'>Order</button>
+</body>
+</html>
