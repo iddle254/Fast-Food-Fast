@@ -3,29 +3,6 @@
       <link rel="stylesheet" type="text/css" href="fast-food.css">
 
 <script type="text/javascript">
-function addRow(Name,Order,Time,Response)
-{
-         if (!document.getElementsByTagName) return;
-         tabBody=document.getElementsByTagName("tbody").item(0);
-         row=document.createElement("tr");
-         cell1 = document.createElement("td");
-         cell2 = document.createElement("td");
-         cell3 = document.createElement("td");
-         cell4 = document.createElement("td");
-         textnode1=document.createTextNode(Name);
-         textnode2=document.createTextNode(Order);
-         textnode3=document.createTextNode(Time);
-         textnode4=document.createTextNode(Response);
-         cell1.appendChild(textnode1);
-         cell2.appendChild(textnode2);
-         cell3.appendChild(textnode3);
-         cell4.appendChild(textnode4);
-         row.appendChild(cell1);
-         row.appendChild(cell2);
-         row.appendChild(cell3);
-         row.appendChild(cell4);
-         tabBody.appendChild(row);
-}
 function Response(evt) {
   var response = evt.target || evt.srcElement;
   if (response.name == 'accept') {
@@ -43,14 +20,14 @@ function Response(evt) {
 <div style="overflow-x:auto;">
 <table border='1' id='mytable'>
 <tbody>
-<tr><th width="32%">Name</th><th width="32%">Order</th><th width="32%">Time</th><th width="32%">Response</th></tr>
-<tr><td>James</td><td>Fried Chicken</td><td>time()</td>
+<tr><th width="32%">Name</th><th width="32%">Order</th><th width="32%">Price</th><th width="32%">Time</th><th width="32%">Response</th></tr>
+<tr><td>James</td><td>Fried Chicken</td><td>800/=</td><td>time()</td>
 		<td><form name="f1" action="#" >
                 <input id="edit1" type="submit" name="accept" value="Accept">
             </form>
         </td>
 </tr>
-<tr><td>Ricky</td><td>Pizza</td><td>time()</td>
+<tr><td>Ricky</td><td>Pizza</td><td>1,000/=</td><td>time()</td>
 	<td><form name="f1" action="#" >
                 <input id="edit1" type="submit" name="accept" value="Accept">
         </form>
@@ -60,7 +37,8 @@ function Response(evt) {
 </table>
 </div>
 <div class="navbar" id="myNavbar">
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
+  <a href="#">Add Menu Items</a>
+  <a href="#">Remove Menu Items</a>
+  <a href="#">Close Shop</a>
 </div>
 </html>

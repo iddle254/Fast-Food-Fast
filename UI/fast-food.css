@@ -8,7 +8,7 @@ body{
 }
 .page-intros{
 font-family:"Courier New", Courier, monospace;
-background-color: #000;
+background: rgba(100, 100, 100, 0.5);
 color: #fff;
 width: 320px;
 font-size:160%;
@@ -24,7 +24,7 @@ padding-top: 20px;
 .loginbox{
     width: 320px;
     height: 420px;
-    background: #000;
+    background: rgba(100, 100, 100, 0.5);
     color: #fff;
     top: 50%;
     left: 50%;
@@ -148,6 +148,7 @@ h1{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    cursor: pointer; 
 }
 
 /* Links inside the dropdown */
@@ -166,6 +167,7 @@ h1{
 .button{
 	float: right;
 	border-radius: 12px;
+    cursor: pointer; 
 }
 .button:hover{
 	background-color: #696;
@@ -174,6 +176,7 @@ h1{
 	border:solid Black;
 	box-shadow: 2px 3px;
 }
+
 
 .food-list-item:first-of-type {
 	margin-left: 0;
@@ -251,7 +254,7 @@ tr:nth-child(even) {background-color: #f2f2f2;}
     color: #00040a;
 }
 #mytable{
-    background-color: #b0b3b7;
+    background: rgba(100, 100, 100, 0.5);
     color: #00040a;
 }
 
