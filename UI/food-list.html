@@ -4,6 +4,39 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="fast-food.css">
 	<div w3-include-html="orders.html"></div>
+	<script type="text/javascript">
+		function chickenFunction() {
+			document.getElementById("chickenDropdown").classList.toggle("show");			 
+		}
+		function pizzaFunction() {
+			document.getElementById("pizzaDropdown").classList.toggle("show");			 
+		}
+		function steakFunction() {
+			document.getElementById("steakDropdown").classList.toggle("show");			 
+		}
+		function burgerFunction() {
+			document.getElementById("burgerDropdown").classList.toggle("show");			 
+		}
+		function riceFunction() {
+			document.getElementById("riceDropdown").classList.toggle("show");			 
+		}
+		function pancakeFunction() {
+			document.getElementById("pancakeDropdown").classList.toggle("show");			 
+		}
+		window.onclick = function(event) {
+  		if (!event.target.matches('.dropbtn')) {
+
+   		 var dropdowns = document.getElementsByClassName("dropdown-content");
+    		var i;
+    		for (i = 0; i < dropdowns.length; i++) {
+      		var openDropdown = dropdowns[i];
+      		if (openDropdown.classList.contains('show')) {
+        	openDropdown.classList.remove('show');
+      		}
+    		}
+  		}
+		}
+	</script>
 </head>
 <body>
 	<div>
@@ -19,7 +52,13 @@
 			<img class="img-responsive" src="images/chicken.jpg" alt="">
 			<h2 class ="paragraph">
 				Fried Chicken
-				<button type="button"class ="button"onclick="makeorder("James",Fried Chicken","time()","Completed");return false">Order</button>
+
+<button onclick="chickenFunction()" class="dropbtn">Order</button>
+  <div id="chickenDropdown" class="dropdown-content">
+    <a href="#">Quater</a>
+    <a href="#">Half</a>
+    <a href="#">Full</a>
+  </div>
 				<hr>
 			</h2>
 			
@@ -29,7 +68,12 @@
 			<img class="img-responsive" src="images/pizza.jpg" alt="">
 			<h2 class ="paragraph">
 				Pizza
-				<button type="button"class ="button">Order</button>
+<button onclick="pizzaFunction()" class="dropbtn">Order</button>
+  <div id="pizzaDropdown" class="dropdown-content">
+    <a href="#">Small</a>
+    <a href="#">Medium</a>
+    <a href="#">Large</a>
+  </div>
 				<hr>
 			</h2>
 			
@@ -38,7 +82,14 @@
 			<img class="img-responsive" src="images/steak.jpg" alt="">
 			<h2 class ="paragraph">
 				Steak
-				<button type="button"class ="button">Order</button>
+<button onclick="steakFunction()" class="dropbtn">Order</button>
+  <div id="steakDropdown" class="dropdown-content">
+    <a href="#">Rib</a>
+    <a href="#">Sirloin</a>
+    <a href="#">Brisket</a>
+    <a href="#">Tenderloin</a>
+    <a href="#">Chuck</a>
+  </div>
 				<hr>
 			</h2>
 			
@@ -47,7 +98,41 @@
 			<img class="img-responsive" src="images/burger.jpg" alt="">
 			<h2 class ="paragraph">
 				Burger
-				<button type="button"class ="button">Order</button>
+<button onclick="burgerFunction()" class="dropbtn">Order</button>
+  <div id="burgerDropdown" class="dropdown-content">
+    <a href="#">Small</a>
+    <a href="#">Medium</a>
+    <a href="#">Large</a>
+  </div>
+				<hr>
+			</h2>
+			
+		</div>
+		<div class="food-list-item">
+			<img class="img-responsive" src="images/pilau.jpeg" alt="">
+			<h2 class ="paragraph">
+				Fried Rice
+<button onclick="riceFunction()" class="dropbtn">Order</button>
+  <div id="riceDropdown" class="dropdown-content">
+    <a href="#">Baked</a>
+    <a href="#">Vegetable fried</a>
+    <a href="#">Ham fried</a>
+  </div>
+				<hr>
+			</h2>
+			
+		</div>
+		<div class="food-list-item">
+			<img class="img-responsive" src="images/pancakes.jpg" alt="">
+			<h2 class ="paragraph">
+				Pancakes
+<button onclick="pancakeFunction()" class="dropbtn">Order</button>
+  <div id="pancakeDropdown" class="dropdown-content">
+    <a href="#">Stardust chocolate</a>
+    <a href="#">Savory</a>
+    <a href="#">Oatmeal</a>
+    <a href="#">Eggnog</a>
+  </div>
 				<hr>
 			</h2>
 			
