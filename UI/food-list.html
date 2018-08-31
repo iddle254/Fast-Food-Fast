@@ -23,6 +23,15 @@
 		function pancakeFunction() {
 			document.getElementById("pancakeDropdown").classList.toggle("show");			 
 		}
+		function toppingsFunction() {
+			document.getElementById("toppingsDropdown").classList.toggle("show");			 
+		}
+		function comboFunction() {
+			if(document.getElementById("chickenComboDropdown")){
+				document.getElementById("chickenComboDropdown").classList.toggle("show");
+			}
+						 
+		}
 		window.onclick = function(event) {
   		if (!event.target.matches('.dropbtn')) {
 
@@ -51,13 +60,19 @@
 		<div class="food-list-item">
 			<img class="img-responsive" src="images/chicken.jpg" alt="">
 			<h2 class ="paragraph">
-				Fried Chicken
+				Chicken
 
 <button onclick="chickenFunction()" class="dropbtn">Order</button>
   <div id="chickenDropdown" class="dropdown-content">
     <a href="#">Quater @450</a>
     <a href="#">Half   @680</a>
     <a href="#">Full   @800</a>
+  </div>
+  <button onclick="comboFunction()" class="dropbtn">Combo</button>
+  <div id="chickenComboDropdown" class="dropdown-content">
+    <a href="#">Fries</a>
+    <a href="#">Ugali</a>
+    <a href="#">Rice</a>
   </div>
 				<hr>
 			</h2>
@@ -75,6 +90,13 @@
     <a href="#">Large  @800</a>
     <a href="#">XLarge @800</a>
   </div>
+  <button onclick="toppingsFunction()" class="dropbtn">Toppings</button>
+  <div id="toppingsDropdown" class="dropdown-content">
+    <a href="#">Pepperoni</a>
+    <a href="#">Meat Lovers</a>
+    <a href="#">Vegetable Affair</a>
+    <a href="#">Chicken and Mushroom</a>
+  </div>
 				<hr>
 			</h2>
 			
@@ -91,6 +113,7 @@
     <a href="#">Tenderloin @900</a>
     <a href="#">Chuck      @1,000</a>
   </div>
+
 				<hr>
 			</h2>
 			
