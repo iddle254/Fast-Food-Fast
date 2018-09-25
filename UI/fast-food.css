@@ -1,11 +1,11 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(images/login.jpg);
-    background-size: cover;
+    background-image: linear-gradient(to right, #a8caba 0%, #5d4157 100%);    background-size: cover;
     background-position: center;
     font-family: sans-serif;
 }
+
 .page-intros{
 font-family:"Courier New", Courier, monospace;
 background: rgba(100, 100, 100, 0.5);
