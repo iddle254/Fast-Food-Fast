@@ -186,6 +186,9 @@ h1{
 	margin-left: .5rem;
 	border-radius: 25px
 }
+.food-list-item h2{
+    margin-top: 0;
+}
 
 .food-list-item:hover {
 	transform: scale(0.9);
