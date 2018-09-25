@@ -163,6 +163,10 @@ h1{
 {
     color: #ffc107;
 }
+::placeholder { 
+    color: black;
+    opacity: 1; 
+}
 .product {
 	width: 90%;
 	margin-top: .3rem;
