@@ -230,9 +230,16 @@ h1{
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 .button{
-	float: right;
+	float: left;
 	border-radius: 12px;
-    cursor: pointer; 
+    cursor: pointer;
+    border: none;
+    outline: none;
+    height: 40px;
+    background: black;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px; 
 }
 .button:hover{
 	background-color: #696;
